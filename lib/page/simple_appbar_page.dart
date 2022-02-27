@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../main.dart';
 import 'contact.dart';
+//import 'settings.dart';
 
 class SimpleAppBarPage extends StatefulWidget {
   const SimpleAppBarPage({Key? key}) : super(key: key);
@@ -15,7 +16,9 @@ class _SimpleAppBarPageState extends State<SimpleAppBarPage> {
   Widget build(BuildContext context) => DefaultTabController(
         length: 5,
         child: Scaffold(
+          backgroundColor: Colors.black12,
           appBar: AppBar(
+            toolbarHeight: 27,
             title: const Text(MyApp.title),
             //centerTitle: true,
             leading: IconButton(
@@ -65,6 +68,7 @@ class _SimpleAppBarPageState extends State<SimpleAppBarPage> {
               buildPage('DPIA Page'),
               const Contact(),
               buildPage('Profiel Pagina'),
+              //MySettings()
               buildPage('Settings Pagina'),
             ],
           ),

@@ -27,7 +27,8 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: title,
         theme: ThemeData(
-          primaryColor: Colors.green,
+          //primaryColor: Colors.green,
+          primarySwatch: Colors.green,
         ),
         home: const MainPage(title: title),
       );
@@ -50,7 +51,16 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         bottomNavigationBar: buildBottomBar(),
-        body: buildPages(),
+        body: Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/blad.jpg'),
+                fit: BoxFit.cover,
+              ),
+            ),
+            padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
+            constraints: BoxConstraints.expand(),
+            child: buildPages()),
       );
 
   Widget buildBottomBar() {

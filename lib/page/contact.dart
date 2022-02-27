@@ -8,20 +8,21 @@ class Contact extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.black54,
         body: SafeArea(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const CircleAvatar(
-              radius: 50.0,
+              radius: 46.0,
+              backgroundColor: Colors.black12,
               backgroundImage: AssetImage('assets/images/playstore.png'),
             ),
             const Text(
               'Robert Zondervan MSc',
               style: TextStyle(
                 fontFamily: 'Pacifico',
-                fontSize: 30.0,
+                fontSize: 27.0,
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
@@ -31,7 +32,7 @@ class Contact extends StatelessWidget {
               style: TextStyle(
                 fontFamily: 'Source Sans Pro',
                 color: Colors.teal.shade100,
-                fontSize: 19.0,
+                fontSize: 17.0,
                 letterSpacing: 2.5,
                 fontWeight: FontWeight.bold,
               ),
@@ -41,7 +42,7 @@ class Contact extends StatelessWidget {
               style: TextStyle(
                 fontFamily: 'Source Sans Pro',
                 color: Colors.teal.shade100,
-                fontSize: 19.0,
+                fontSize: 17.0,
                 letterSpacing: 2.5,
                 fontWeight: FontWeight.bold,
               ),
@@ -54,8 +55,8 @@ class Contact extends StatelessWidget {
               ),
             ),
             Card(
-                margin: const EdgeInsets.symmetric(
-                    vertical: 10.0, horizontal: 25.0),
+                margin:
+                    const EdgeInsets.symmetric(vertical: 5.0, horizontal: 25.0),
                 child: ListTile(
                   leading: const Icon(
                     Icons.phone,
@@ -71,8 +72,8 @@ class Contact extends StatelessWidget {
                   ),
                 )),
             Card(
-                margin: const EdgeInsets.symmetric(
-                    vertical: 10.0, horizontal: 25.0),
+                margin:
+                    const EdgeInsets.symmetric(vertical: 5.0, horizontal: 25.0),
                 child: ListTile(
                   leading: const Icon(
                     Icons.email,
@@ -81,27 +82,28 @@ class Contact extends StatelessWidget {
                   title: Text(
                     'rzondervan@cioforum.nl',
                     style: TextStyle(
-                        fontSize: 20.0,
+                        fontSize: 18.0,
                         color: Colors.green.shade900,
                         fontFamily: 'Source Sans Pro'),
                   ),
                 )),
-            const Card(
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+            Card(
+                margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 25.0),
                 child: ListTile(
                   tileColor: Colors.green,
                   leading: Icon(
-                    Icons.settings_power,
+                    Icons.chat,
                     color: Colors.white,
                   ),
                   title: Text(
                     'Chat',
-                    style: TextStyle(
-                        fontSize: 20.0,
-                        backgroundColor: Colors.green,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Source Sans Pro'),
+                    style: Theme.of(context).textTheme.headline6,
+                    // style: TextStyle(
+                    //     fontSize: 20.0,
+                    //     backgroundColor: Colors.green,
+                    //     color: Colors.white,
+                    //     fontWeight: FontWeight.bold,
+                    //     fontFamily: 'Source Sans Pro'),
                   ),
                 ))
           ],
